@@ -1,4 +1,5 @@
 # TODO
+<img src="images/preview/PreviewNo2.png" />
 
 ### Application Status
 Currently, this application operates exclusively in debugging mode.
@@ -33,13 +34,6 @@ flutter pub add flutter_native_timezone
 flutter pub add flutter_local_notifications
 flutter pub add flutter_staggered_animations
 ```
-
-# Preview
-
-<img src="images/preview/PreviewNo2.png" />
-
-###
-
 ### Explore the UI through [this link](images/preview)
 
 #### **Contact me anytime if you have questions.** : [Here](https://linktr.ee/userahmed)
