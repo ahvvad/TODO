@@ -1,11 +1,6 @@
 # TODO
 <img src="images/preview/PreviewNo2.png" />
 
-### Application Status
-Currently, this application operates exclusively in debugging mode.
-
----
-
 ### Releases
 You can find the application in the **Releases** section or by [following this link](#).
 
