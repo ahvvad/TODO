@@ -25,18 +25,17 @@ class NotifyHelper {
     _configureSelectNotificationSubject();
     await _configureLocalTimeZone();
     // await requestIOSPermissions(flutterLocalNotificationsPlugin);
-    final DarwinInitializationSettings initializationSettingsIOS =
+    const DarwinInitializationSettings initializationSettingsIOS =
         DarwinInitializationSettings(
       requestSoundPermission: false,
       requestBadgePermission: false,
       requestAlertPermission: false,
-      onDidReceiveLocalNotification: onDidReceiveLocalNotification,
     );
 
     const AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('appicon');
 
-    final InitializationSettings initializationSettings =
+    const InitializationSettings initializationSettings =
         InitializationSettings(
       iOS: initializationSettingsIOS,
       android: initializationSettingsAndroid,
@@ -99,7 +98,7 @@ class NotifyHelper {
           // 'your channel description',
         ),
       ),
-      androidAllowWhileIdle: true,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.time,
@@ -196,7 +195,7 @@ class NotifyHelper {
 
   Future<void> _configureLocalTimeZone() async {
     tz.initializeTimeZones();
-    final String timeZoneName = await FlutterNativeTimezone.getLocalTimezone();
+     final String timeZoneName = await FlutterNativeTimezone.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(timeZoneName));
   }
 
